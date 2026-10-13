@@ -4,5 +4,6 @@
   "welcome": "ফ্লাটারে স্বাগতম!",
   "message": "সহজেই Flutter Localization শিখুন।",
   "login": "লগইন",
-  "logout": "লগআউট"
+  "logout": "লগআউট",
+  "greeting": "হ্যালো, {}!"
 }
