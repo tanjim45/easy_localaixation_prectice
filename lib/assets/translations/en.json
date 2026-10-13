@@ -1,0 +1,12 @@
+
+{
+  "appName": "Localization Practice",
+  "welcome": "Welcome to Flutter!",
+  "home": "Home",
+  "settings": "Settings",
+  "changeLanguage": "Change Language",
+  "hello": "Hello!",
+  "message": "Learn Flutter localization easily.",
+  "english": "English",
+  "bangla": "Bangla"
+}
