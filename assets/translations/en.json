@@ -1,0 +1,8 @@
+
+{
+  "appName": "Localization Practice",
+  "welcome": "Welcome to Flutter!",
+  "message": "Learn Flutter localization easily.",
+  "login": "Login",
+  "logout": "Logout"
+}
