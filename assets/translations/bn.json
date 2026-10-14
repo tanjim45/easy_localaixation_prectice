@@ -4,6 +4,14 @@
   "welcome": "ফ্লাটারে স্বাগতম!",
   "message": "সহজেই Flutter Localization শিখুন।",
   "login": "লগইন",
-  "logout": "লগআউট",
-  "greeting": "হ্যালো, {}!"
+  "greeting": "হ্যালো, {}!",
+  "enterName": "তোমার নাম লেখো",
+  "showGreeting": "শুভেচ্ছা দেখাও",
+  "language": "ভাষা নির্বাচন করো",
+  "nameRequired": "অনুগ্রহ করে তোমার নাম লেখো",
+  "taskCount": {
+    "zero": "কোনো কাজ নেই",
+    "one": "{}টি কাজ",
+    "other": "{}টি কাজ"
+  }
 }

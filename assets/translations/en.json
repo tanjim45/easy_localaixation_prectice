@@ -4,6 +4,15 @@
   "welcome": "Welcome to Flutter!",
   "message": "Learn Flutter localization easily.",
   "login": "Login",
-  "logout": "Logout",
-  "greeting": "Hello, {}!"
+  "greeting": "Hello, {}!",
+  "enterName": "Enter your name",
+  "showGreeting": "Show Greeting",
+  "language": "Choose Language",
+  "nameRequired": "Please enter your name",
+  "taskCount": {
+    "zero": "No tasks",
+    "one": "{} task",
+    "other": "{} tasks"
+  }
+  
 }
