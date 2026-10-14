@@ -42,6 +42,7 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController nameController = TextEditingController();
 
   String userName = 'Tanjim';
+  String selectedGender = 'male';
 
   @override
   void dispose() {
@@ -56,7 +57,32 @@ class _HomePageState extends State<HomePage> {
         title: Text('appName'.tr()),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: TextButton(
+              onPressed: () {
+                final currentLocale = context.locale.languageCode;
+
+                context.setLocale(
+                  currentLocale == 'en'
+                      ? const Locale('bn')
+                      : const Locale('en'),
+                );
+              },
+              child: Text(
+                context.locale.languageCode == 'en' ? 'বাংলা' : 'English',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
+
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24),
@@ -106,6 +132,7 @@ class _HomePageState extends State<HomePage> {
                 },
                 child: Text('showGreeting'.tr()),
               ),
+
               const SizedBox(height: 20),
 
               Text(
@@ -119,12 +146,55 @@ class _HomePageState extends State<HomePage> {
 
               const SizedBox(height: 20),
 
+              // Male / Female selection
+              Text(
+                'selectGender'.tr(),
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 8),
+
+              DropdownButton<String>(
+                value: selectedGender,
+                items: [
+                  DropdownMenuItem(value: 'male', child: Text('male'.tr())),
+                  DropdownMenuItem(value: 'female', child: Text('female'.tr())),
+                ],
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() {
+                      selectedGender = value;
+                    });
+                  }
+                },
+              ),
+
+              const SizedBox(height: 12),
+
+              Text(
+                selectedGender == 'male'
+                    ? 'welcomeMale'.tr()
+                    : 'welcomeFemale'.tr(),
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 20),
+
+              // Pluralization practice
               Text('taskCount'.plural(0), style: const TextStyle(fontSize: 18)),
               Text('taskCount'.plural(1), style: const TextStyle(fontSize: 18)),
               Text('taskCount'.plural(5), style: const TextStyle(fontSize: 18)),
 
               const SizedBox(height: 20),
 
+              // Language selection
               DropdownButton<Locale>(
                 value: context.locale,
                 items: const [
@@ -137,6 +207,8 @@ class _HomePageState extends State<HomePage> {
                   }
                 },
               ),
+
+              const SizedBox(height: 12),
 
               ElevatedButton(
                 onPressed: () {

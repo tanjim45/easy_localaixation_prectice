@@ -13,6 +13,11 @@
     "zero": "No tasks",
     "one": "{} task",
     "other": "{} tasks"
-  }
-  
+  },
+  "welcomeMale": "He is welcome",
+  "welcomeFemale": "She is welcome"
+  ,
+"selectGender": "Select gender",
+"male": "Male",
+"female": "Female"
 }
